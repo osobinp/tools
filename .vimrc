@@ -13,4 +13,5 @@ let g:netrw_banner = 0
 augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
+  autocmd FileType netrw setl bufhidden=delete
 augroup END
