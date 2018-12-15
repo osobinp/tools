@@ -17,6 +17,7 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=20000
+HISTTIMEFORMAT="%d/%m/%y %T "
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -97,6 +98,15 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+
+alias mkdir='mkdir -pv'
+
+# Parenting changing perms on / #
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+alias wget='wget -c'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
