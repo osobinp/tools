@@ -3,7 +3,7 @@ syntax on
 :colorscheme desert
 set cursorline
 autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0
-
+:set mouse=a
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
 let g:netrw_browse_split = 4
