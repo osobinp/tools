@@ -1,0 +1,27 @@
+"*":
+  core:
+    disabledPackages: [
+      "linter-ansible-linting"
+      "linter"
+    ]
+    telemetryConsent: "no"
+    uriHandlerRegistration: "always"
+  editor:
+    fontSize: 15
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "bf233b1f-43af-41ee-a395-4e90f7d98689"
+  "linter-ansible-linting":
+    ansibleLintExecutablePath: "C:\\Users\\pawel.osobinski\\AppData\\Local\\Packages\\TheDebianProject.DebianGNULinux_76v4gfsz19hv4\\LocalState\\rootfs\\home\\krypto\\.local\\bin\\ansible-lint"
+  "linter-ui-default":
+    panelHeight: 332
+  "platformio-ide-terminal":
+    core:
+      shell: "C:\\WINDOWS\\System32\\wsl.exe"
+    style:
+      defaultPanelHeight: "200px"
+    toggles:
+      autoClose: true
+  welcome:
+    showOnStartup: false

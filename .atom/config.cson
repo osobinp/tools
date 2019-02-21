@@ -1,0 +1,23 @@
+"*":
+  core:
+    destroyEmptyPanes: false
+    telemetryConsent: "no"
+  editor:
+    fontSize: 13
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "45c53252-c047-4bb1-b84f-8c0b99ccbd74"
+  "linter-spell": {}
+  "linter-ui-default": {}
+  "platformio-ide-terminal":
+    style:
+      defaultPanelHeight: "150px"
+    toggles:
+      autoClose: true
+  "spell-check":
+    locales: [
+      "en-US"
+    ]
+  welcome:
+    showOnStartup: false
