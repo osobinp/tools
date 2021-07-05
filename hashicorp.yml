@@ -1,0 +1,61 @@
+---
+
+- name: "Hashicorp tools"
+
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+
+    # Debain based
+    - block:
+
+      - name: "Deb - Add an Apt signing key"
+        apt_key:
+          url: https://apt.releases.hashicorp.com/gpg
+          state: present
+
+      - name: "Deb - Add repository"
+        apt_repository:
+          repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_lsb.codename }} main"
+          state: present
+          filename: hashicorp
+
+      - name: "Deb - Install essential packages"
+        apt:
+          pkg:
+            - terraform
+            - vagrant
+            - packer
+          update_cache: yes
+    
+      when: ansible_facts['os_family'] == "Debian"
+
+    # RHEL based
+    - block:
+
+      - name: "RHEL - Install deps"
+        yum:
+          name: yum-utils
+          state: present
+
+      - name: "RHEL - Add repository"
+        get_url:
+          url: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+          dest: /etc/yum.repos.d/hashicorp.repo
+          mode: '0440'
+
+
+      - name: "RHEL - Install essential packages"
+        yum:
+          name: "{{ packages }}"
+          state: latest
+          update_cache: yes
+        vars:
+          packages:
+            - terraform
+            - vagrant
+            - packer
+
+      when: ansible_facts['os_family'] == "RedHat"
