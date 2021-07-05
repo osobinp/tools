@@ -18,8 +18,8 @@ virtualenv $ENV_NAME
 
 if [ $? -eq 0 ]; then
     source $PWD/$ENV_NAME/bin/activate
-    python -m pip install --upgrade pip
-    pip install -r $TOOLS_PATH/requirements.txt
+    python3 -m pip install --upgrade pip
+    pip3 install -r $TOOLS_PATH/requirements.txt
 
     ansible-playbook $TOOLS_PATH/hashicorp.yml 
 
@@ -27,6 +27,6 @@ if [ $? -eq 0 ]; then
     echo "Run: source $PWD/$ENV_NAME/bin/activate"
     echo "-----------------"
 else
-    echo "Install python-pip && pip install virtualenv"
+    echo "Install python3-pip && pip3 install virtualenv"
 fi
  
