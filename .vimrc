@@ -18,3 +18,4 @@ augroup ProjectDrawer
   autocmd VimEnter * :Vexplore
   autocmd FileType netrw setl bufhidden=delete
 augroup END
+set autoindent
