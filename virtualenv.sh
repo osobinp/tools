@@ -12,6 +12,7 @@ fi
 
 cp $TOOLS_PATH/.bashrc $HOME
 cp $TOOLS_PATH/.vimrc $HOME
+cp $TOOLS_PATH/.gitconfig $HOME
 cp -R $TOOLS_PATH/.atom $HOME
 
 virtualenv $ENV_NAME
@@ -26,6 +27,7 @@ if [ $? -eq 0 ]; then
     echo "-----------------"
     echo "Run: source $PWD/$ENV_NAME/bin/activate"
     echo "-----------------"
+    echo "Run: source $PWD/$ENV_NAME/bin/activate" >> $HOME/.bashrc
 else
     echo "Install python3-pip && pip3 install virtualenv"
 fi
