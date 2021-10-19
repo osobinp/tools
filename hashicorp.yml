@@ -11,6 +11,12 @@
     # Debain based
     - block:
 
+      - name: "Deb - Install essential packages"
+        apt:
+          pkg:
+            - lsb-release
+          update_cache: yes
+
       - name: "Deb - Add an Apt signing key"
         apt_key:
           url: https://apt.releases.hashicorp.com/gpg
