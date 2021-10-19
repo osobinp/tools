@@ -27,7 +27,8 @@ if [ $? -eq 0 ]; then
     echo "-----------------"
     echo "Run: source $PWD/$ENV_NAME/bin/activate"
     echo "-----------------"
-    echo "source $PWD/$ENV_NAME/bin/activate" >> $HOME/.bashrc
+    grep -qxF "source $PWD/$ENV_NAME/bin/activate" $HOME/.bashrc || echo "source $PWD/$ENV_NAME/bin/activate" >> $HOME/.bashrc
+    
 else
     echo "Install python3-pip && pip3 install virtualenv"
 fi
