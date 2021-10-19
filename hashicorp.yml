@@ -11,11 +11,14 @@
     # Debain based
     - block:
 
-      - name: "Deb - Install essential packages"
+      - name: "Make sure lsb-release is present"
         apt:
           pkg:
             - lsb-release
           update_cache: yes
+
+      - name: "Refresh facts"
+        setup:
 
       - name: "Deb - Add an Apt signing key"
         apt_key:
