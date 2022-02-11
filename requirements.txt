@@ -3,3 +3,4 @@ ansible-lint
 awscli
 boto3
 pyOpenSSL
+pywinrm
